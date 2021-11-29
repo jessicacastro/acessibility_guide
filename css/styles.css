@@ -1,0 +1,167 @@
+:root { 
+  --background-black: #212529;
+  --color-white: #FFFFFF;
+  --color-light-blue: #90B8F8;
+  --background-green-lime: #77ff7c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--background-black);
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.material-icons-outlined.md-24 { font-size: 40px; }
+
+header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  height: 60px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+header i {
+  font-size: 10px;
+}
+
+header i:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+header h5 {
+  margin-left: 6px;
+  margin-top: 3px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 13.28px;
+}
+
+nav ul li {
+  margin-left: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+nav ul li:hover {
+  opacity: 0.6;
+}
+
+.menu {
+  display: none;
+}
+
+.menu i {
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.box-acessibility {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  background: var(--color-white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  cursor: pointer;
+  right: 10px;
+}
+
+.box-acessibility i {
+  color: #212529;
+}
+
+
+.motivation, .crucials {
+  padding: 0 50px;
+  margin-top: 40px;
+}
+
+.motivation h3 {
+  margin: 30px 0 15px;
+}
+
+.motivation p, .crucials p {
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.motivation a {
+  color: var(--background-green-lime);
+}
+
+.motivation ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+@media all and (max-width: 590px) {
+  .active {
+    display: block;
+  }
+
+  .inative {
+    display: none;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .navbar ul li {
+    display: block;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+  }
+}
