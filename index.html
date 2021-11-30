@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="shortcut icon" href="img/favicon-16x16.ico" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +15,39 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Guia de Acessibilidade</title>
 </head>
-<body>
+<body class="grayMode">
+  <nav class="accessible_menu">
+    <div class="font-changer">
+      <label for="fonte">Tamanho da fonte:</label>
+      <ul id="fonte">
+        <li>
+          <a id="fontUp"  alt="Aumentar fonte">A+</a>
+        </li>
+
+        <li>
+          <a id="fontDown"  alt="Diminuir fonte">A-</a>
+        </li>
+      </ul>
+    </div>
+
+    <h4>Menu acessível</h4>
+
+    <div class="contrast-changer">
+      <label for="contraste">Cor de contraste:</label>
+      <ul id="contraste">
+        <li>
+          <a id="whiteMode"></a>
+        </li>
+
+        <li id="black-background">
+          <a id="blackMode"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
-    <i class="material-icons-outlined">
+    <i class="material-icons-outlined md-24">
       accessible_forward
     </i>
 
@@ -28,7 +60,7 @@
         </li>
         <li>
           <a href="#crucials">
-            Pontos cruciais e públicos
+            Ir para o conteúdo
           </a>
         </li>
       </ul>
@@ -44,7 +76,7 @@
   </div>
 
   <div class="box-acessibility">
-    <i class="material-icons-outlined md-24">accessibility_new</i>
+    <i class="material-icons-outlined md-40">accessibility_new</i>
   </div>
 
   <section id="motivation" class="motivation">
@@ -93,15 +125,124 @@
   <section id="crucials" class="crucials">
     <h2>Pontos cruciais e públicos</h2>
 
-    <p>Nesta seção, iremos averiguar algumas das iniciativas acessíveis que podemos inserir em Sistemas Web e Sites.</p>
+    <p>Nesta seção, iremos averiguar algumas das iniciativas acessíveis que podemos inserir em Sistemas Web e Sites. 
+      É possível scrollar (rolar) um conteúdo de cada caixa!</p>
 
-    <ul>
-      <li>Listar aqui algumas das iniciativas</li>
-      <li>Fazer o modal com acessibilidade</li>
-      <li>Fazer o footer</li>
-      <li>Inserir 1 alternativa de acessibilidade de teclado no menu</li>
-    </ul>
+    <div class="line-crucials">
+      <div class="box">
+        <i class="material-icons-outlined md-30">dvr</i>
+        <h4>Leitores de Tela</h4>
+
+        <p>
+          Os leitores de tela são muito importantes para pessoas que possuam deficiência visual. O programa percorre 
+          textos e imagens lendo em voz alta tudo que é possível encontrar na tela. Assim como operações que o usuário realiza.
+        </p>
+
+        <h5>Como funciona:</h5>
+        <p>1. Lendo toda a página (navegação com as setas)</p>
+        <p>2. Lendo os links (navegação com a tecla TAB)</p>
+        <p>3. Lendo os cabeçalhos (navegação com a tecla H)</p>
+       
+        <h5>Softwares mais comuns:</h5>
+        <p>1. Jaws (Windows - Pago)</p>
+        <p>2. NVDA (Windows - Gratuito)</p>
+        <p>3. Orca (Linux - Gratuito)</p>
+        <p>4. VoiceOver (Apple - Gratuito)</p>
+
+        <div class="button-line">
+          <a href="https://brasil.uxdesign.cc/acessibilidade-como-funcionam-os-leitores-de-tela-3d9b610216e1" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="material-icons-outlined md-30">waving_hand</i>
+        <h4>Hand Talk</h4>
+
+        <p>
+          O Hand Talk é um aplicativo gratuito para celulares Android e iPhone (iOS) que permite traduzir textos 
+          em Libras (Língua Brasileira de Sinais). A ferramenta usa um avatar digital, interpretado pelo personagem Hugo, 
+          para desenvolver os gestos e facilitar a comunicação com pessoas surdas ou com dificuldade auditiva.
+        </p>
+
+        <div class="button-line">
+          <a href="https://www.handtalk.me/br" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="material-icons-outlined md-30">article</i>
+        <h4>Texto Alternativo</h4>
+
+        <p>
+          Todas as informações de uma página devem ser apresentadas em texto. Isso significa que, se for usada outra
+           mídia, como imagens e sons, as informações que elas contêm devem estar trasncritas e equivalente aos elementos
+           disponibilizados, ou seja, em uma imagem de um cachorro correndo no jardim, devemos utilizar o alt dizendo exatamente isso!
+        </p>
+
+        <div class="button-line">
+          <a href="https://blog.handtalk.me/texto-alternativo-alt/" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="material-icons-outlined md-30">keyboard</i>
+        <h4>Navegar pelo Teclado</h4>
+
+        <p>
+          A navegação pelo teclado é muito utilizada por pessoas com deficiência visual ou motora (pessoas que possuem baixa ou
+          nenhuma destreza/coordenação motora)
+        </p>
+
+        <p>
+          Podemos utilizar teclas de atalho do próprio navegador, teclas do leitor de tela ou outras tecnologias 
+          assistivas e até atalhos criados por desenvolvedores.
+        </p>
+
+        <div class="button-line">
+          <a href="https://ptb.docs.genesys.com/Documentation/IW/8.5.1/Help/Keyboard_Navigation_and_Accessibility" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="material-icons-outlined md-30">contrast</i>
+        <h4>Contrastes</h4>
+
+        <p>
+          Nem todas as pessoas percebem as cores da mesma maneira, por isso precisamos sempre pensar no contraste, 
+          cor de textos e de fundo.
+        </p>
+        <p>
+          Cores que não combinam podem não permitir a legibilidade do conteúdo. Cores devem ser distinguíveis para daltônicos,
+          ter ícones representativos, ser acompanhada de outras informações a fim de que a mensagem seja entendida para quem não enxergar apenas a cor.
+        </p>      
+
+        <div class="button-line">
+          <a href="https://ux.sapo.pt/acessibilidade/web-acessibilidade/cores-e-contrastes/" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="material-icons-outlined md-30">text_format</i>
+        <h4>Tamanhos de Fonte</h4>
+
+        <p>
+          Mesmo pessoas que não sofrem de nenhuma problema visual grande podem ter dificuldades de ler se o tamanho da fonte for muito reduzido.
+
+          Sempre utilize fontes legíveis e, se seu site não foi pensado com fontes grandes, 
+          procure permitir alterem o tamanho da fonte do seu conteúdo, isso 
+          beneficia idosos, míopes e pessoas com determinadas deficiências visuais.
+        </p>
+
+        <div class="button-line">
+          <a href="https://www.ufrgs.br/acessibilidadedigital/tamanho-da-fonte/" target="_blank" class="button">Saiba mais</a>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <footer>
+    <p>Todos os direitos reservados &copy; <a href="http://github.com/jessicacastro" target="_blank">Jessica Castro</a> - 2021</p>
+  </footer>
 
   <script src="js/index.js"></script>
 </body>
